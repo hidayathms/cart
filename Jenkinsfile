@@ -5,6 +5,9 @@ pipeline {
     stages {
         stage('Lint Checks') {
             steps {
+                script {
+                    sample.info("catalogue")
+                }
                 sh "echo ***** Starting Style checks *******"
                 sh "npm i jslint"
                 sh "ls -ltr node_modules/jslint/bin"
